@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header, nav, section, footer {
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ccc;
+}
+
+h1 {
+    text-align: center;
+    background-color: #003580;
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #003580;
+}
+
+h2 {
+    color: #003580;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8em;
+}
+
+#drone-delivery-options ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#drone-delivery-options li {
+    border: 1px solid #003580;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+#drone-delivery-options button {
+    background-color: #003580;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#drone-delivery-options button:hover {
+    background-color: #0056b3;
+}
