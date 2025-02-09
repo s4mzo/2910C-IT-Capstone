@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Buy Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="weather.js"></script> <!-- Weather JavaScript -->
+</head>
+<body>
+    <header>
+        <h1>Best Buy Clone</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#store-selection">Store Selection</a></li>
+            <li><a href="#inventory">Inventory Management</a></li>
+            <li><a href="#checkout">Checkout Process</a></li>
+            <li><a href="#weather-protocols">Drone Safety & Weather</a></li> <!-- New Section Link -->
+        </ul>
+    </nav>
+    
+    <section id="store-selection">
+        <h2>3.1 Store Selection and Inventory Management</h2>
+        <p>Select a Store Location:</p>
+        <ul>
+            <li>233 City Dr, Sometown in Nowhere, 77285</li>
+            <li>0091 Best Buy WareHouse, Major City Lane, 99364</li>
+            <li>9241 Suburb Corner, Express County, 44932</li>
+        </ul>
+    </section>
+
+    <section id="checkout">
+        <h2>3.2 Checkout Process</h2>
+        <p>Delivery Options:</p>
+        <ul>
+            <li>Standard Delivery</li>
+            <li><a href="drone-delivery.html">Premium Drone Delivery</a></li>
+        </ul>
+    </section>
+
+    <section id="weather-protocols">
+        <h2> Weather Protocols & Safety Measures</h2>
+        <p>To ensure drones operate safely, weather conditions are checked before every delivery.</p>
+
+        <h3> 🚩 Wind Speed Limits 🚩 </h3>
+        <p>If wind speeds exceed 22 mph, deliveries are <span class="alert">paused</span> for safety.</p>
+        <ul>
+            <li>Drones check wind speeds before takeoff.</li>
+            <li>High winds lasting over 30 minutes will delay deliveries.</li>
+        </ul>
+
+        <h3> 📦 Visibility & Navigation 📦 </h3>
+        <p> For safe flights, drones require at least 0.5 miles of visibility. </p>
+        <p> Poor conditions cause temporary suspensions. </p>
+    </section>
+
+    <section id="weather-check">
+        <h2>Check Weather Conditions</h2>
+        <label for="zipcode">ZIP Code:</label>
+        <input type="text" id="zipcode" placeholder="Enter ZIP (e.g., 32801)">
+        <button id="checkWeatherBtn">Check Weather</button>
+
+        <div id="weather-result">
+            <h3>Current Weather</h3>
+            <p><strong>Temperature:</strong> <span id="temp"></span></p>
+            <p><strong>Wind Speed:</strong> <span id="wind"></span></p>
+            <p><strong>Visibility:</strong> <span id="visibility"></span></p>
+            <p><strong>Condition:</strong> <span id="condition"></span></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Best Buy Clone. All rights reserved.</p>
+    </footer>
+</body>
+</html>
