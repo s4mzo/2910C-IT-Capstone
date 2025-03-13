@@ -2,7 +2,19 @@ document.addEventListener("DOMContentLoaded", function () {
     let checkWeatherBtn = document.getElementById("checkWeatherBtn");
 
     checkWeatherBtn.addEventListener("click", function () {
-        let zip = document.getElementById("zipcode").value;
+        let address = document.getElementById("delivery-address").value;
+        if (!address) {
+            alert("Please enter a valid delivery address.");
+            return;
+        }
+
+        // Extract ZIP code (last word from the address)
+        let zip = address.split(" ").pop();
+        if (!/^\d{5}$/.test(zip)) {
+            alert("Please enter a valid ZIP code.");
+            return;
+        }
+
         getWeather(zip);
     });
 });
@@ -42,11 +54,18 @@ function getWeather(zip) {
             }
 
             if (warning !== "") {
-                alert(warning);
+                alert(warning + " Delivery paused.");
+            } else {
+                startDelivery();
             }
         })
         .catch(error => {
             console.error("Error fetching weather:", error);
             alert("Weather data is unavailable. Try again later.");
         });
+}
+
+function startDelivery() {
+    document.getElementById("drone-delivery").style.display = "block";
+    alert("✅ Weather conditions are good! Drone delivery is starting.");
 }
